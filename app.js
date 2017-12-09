@@ -5,10 +5,10 @@ window.addEventListener('load', function() {
   loadingSpinner.style.display = 'none';
 
   var webAuth = new auth0.WebAuth({
-    domain: AUTH0_DOMAIN,
-    clientID: AUTH0_CLIENT_ID,
-    redirectUri: AUTH0_CALLBACK_URL,
-    audience: 'https://' + AUTH0_DOMAIN + '/userinfo',
+    domain: 'unreportable.eu.auth0.com',
+    clientID: JDaQgVp35PQVIHyg5hR0Rgf0D7Bx7172,
+    redirectUri: 'https://unreportable.github.io/',
+    audience: 'https://unreportable.eu.auth0.com/userinfo',
     responseType: 'token id_token',
     scope: 'openid',
     leeway: 60
