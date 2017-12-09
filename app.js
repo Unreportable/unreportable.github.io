@@ -6,7 +6,7 @@ window.addEventListener('load', function() {
 
   var webAuth = new auth0.WebAuth({
     domain: 'unreportable.eu.auth0.com',
-    clientID: JDaQgVp35PQVIHyg5hR0Rgf0D7Bx7172,
+    clientID: 'JDaQgVp35PQVIHyg5hR0Rgf0D7Bx7172',
     redirectUri: 'https://unreportable.github.io/',
     audience: 'https://unreportable.eu.auth0.com/userinfo',
     responseType: 'token id_token',
