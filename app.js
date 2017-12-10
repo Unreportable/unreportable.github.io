@@ -97,7 +97,7 @@ console.log(email1);
   webAuth.client.userInfo(accessToken1, function(err, profile) { 
 if (profile) { 
 userProfile = profile; 
-  console.log("bil tyt");
+  console.log(userProfile.name);
   
 } else {
 
