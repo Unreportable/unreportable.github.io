@@ -70,7 +70,13 @@ var buttonbuy=document.getElementById('btn-buy');
     var expiresAt = JSON.parse(localStorage.getItem('expires_at'));
     return new Date().getTime() < expiresAt;
   }
-
+        webAuth.client.userInfo(localStorage.access_Token, function(err, profile) { 
+if (profile) { 
+var userProfile = profile; 
+  var email1 = JSON.parse(userProfile);
+console.log(email1);
+} 
+});
   function handleAuthentication() {
     webAuth.parseHash(function(err, authResult) {
       if (authResult && authResult.accessToken && authResult.idToken) {
@@ -85,34 +91,23 @@ var buttonbuy=document.getElementById('btn-buy');
           'Error: ' + err.error + '. Check the console for further details.'
         );
       }
-        webAuth.client.userInfo(authResult.accessToken, function(err, profile) { 
-if (profile) { 
-var userProfile = profile; 
-  var email1 = JSON.parse(userProfile);
-console.log(email1);
-} 
-});
+
       displayButtons();
     });
   }
 
 
-
-  
   function displayButtons() {
     if (isAuthenticated()) {
       loginBtn.style.display = 'none';
       logoutBtn.style.display = 'inline-block';
       loginStatus.innerHTML = 'You are logged in!';
-
       li1.style.display = 'block';
       li2.style.display = 'block';
-      li3.style.display = 'block';
-     /* li4.style.display = 'block';*/
+      li3.style.display = 'block';   
       li5.style.display = 'block';
       li6.style.display = 'block';
-buttonbuy.style.display='inline-block';
-      
+      buttonbuy.style.display='inline-block';   
     } else {
       loginBtn.style.display = 'inline-block';
       logoutBtn.style.display = 'none';
@@ -121,15 +116,10 @@ buttonbuy.style.display='inline-block';
         li1.style.display = 'none';
         li2.style.display = 'none';
         li3.style.display = 'none';
-       /* li4.style.display = 'none';*/
         li5.style.display = 'none';
         li6.style.display = 'none';
   buttonbuy.style.display='none';
     }
   }
-
   handleAuthentication();
 });
-
-
-
