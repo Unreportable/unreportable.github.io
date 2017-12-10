@@ -88,6 +88,7 @@ console.log(email1);
      
      ;}
                      }*/
+  var profile;
   var userProfile;
   function dispemail(){
   
@@ -98,7 +99,12 @@ if (profile) {
 userProfile = profile; 
   Console.log(userProfile.name);
   
-} 
+} else {
+
+Console.log("very bad");
+
+
+}
 });
   
   
