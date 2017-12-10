@@ -80,7 +80,7 @@ min-width: 70px;
 
 }
 body {
-    
+    background: url(img/bg.png) repeat ;
     font: normal normal 14px/20px Arial, Georgia, "Times New Roman", Times, serif;
 }
 h1 {
@@ -182,20 +182,7 @@ input.error:focus, textarea.error:focus {
     background: #979797;
 }
 /* Форма обратной связи */
-.modalbox1 {
-    color: #FFFFFF;
-    display: block;
-    cursor: pointer;
-    padding: 10px 11px;
-    font-size: 1.2em;
-    border: solid 1px #F9F9F9;
-    border-radius: 2px;
-    background: #70C6B9;
-    width: 210px;
-    text-decoration: none;
-    text-align: center;
-    margin:0 auto 20px;
-}
+
 .modalbox {
     color: #FFFFFF;
     display: block;
