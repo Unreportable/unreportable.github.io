@@ -97,7 +97,7 @@ console.log(email1);
   webAuth.client.userInfo(accessToken, function(err, profile) { 
 if (profile) { 
 userProfile = profile; 
-  Console.log(userProfile.name);
+  Console.log("bil tyt");
   
 } else {
 
@@ -154,7 +154,7 @@ Console.log("very bad");
         li3.style.display = 'none';
         li5.style.display = 'none';
         li6.style.display = 'none';
-      dispemail();
+     
   buttonbuy.style.display='none';
     }
   }
