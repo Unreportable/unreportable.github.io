@@ -158,12 +158,12 @@ jQuery(function($){
         // сначала мы скрываем кнопку отправки
         $("#send").replaceWith("<em>отправка...</em>");
         $.ajax({
-          type: 'POST',
+          /*type: 'POST',
           url: 'sendmessage.php',
           data: $("#contact").serialize(),
           success: function(data) {
             if(data == "true") {
-              $("#contact").fadeOut("fast", function(){
+              $("#contact").fadeOut("fast", function(){*/
                 $(this).before("<p><strong>Успешно! Ваше сообщение отправлено  :)</strong></p>");
                 setTimeout("$.fancybox.close()", 1000);
               });
