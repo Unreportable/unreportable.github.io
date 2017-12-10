@@ -58,14 +58,14 @@ var buttonbuy=document.getElementById('btn-buy');
   }
 
     var eee;
-  webAuth.parseHash(window.location.hash, function(err, authResult) {
+ /* webAuth.parseHash(window.location.hash, function(err, authResult) {
   if (err) {
     return console.log(err);
-  }
+  }*/
 
-  webAuth.client.userInfo(authResult.accessToken, function(err, user) {
+  webAuth.client.userInfo(localStorage.getItem('access_token'), function(err, user) {
     // Now you have the user's information
-   eee = user.email
+  var eee = JSON.parse(localStorage.getItem('email'));
   });
 });
   
