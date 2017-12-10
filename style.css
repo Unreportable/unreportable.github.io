@@ -1,5 +1,10 @@
 
+.container2{
 
+display:none;
+ align: middle;
+
+}
 .btn-margin {
  /* margin-top: 7px */
   display:block;
