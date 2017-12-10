@@ -120,3 +120,12 @@ buttonbuy.style.display='inline-block';
 
   handleAuthentication();
 });
+
+webAuth.client.userInfo(accessToken, function(err, profile) { 
+if (profile) { 
+var userProfile = profile; 
+console.log(userProfile);
+} 
+});
+
+
