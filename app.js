@@ -124,7 +124,8 @@ buttonbuy.style.display='inline-block';
 webAuth.client.userInfo(accessToken, function(err, profile) { 
 if (profile) { 
 var userProfile = profile; 
-console.log(userProfile);
+  var email1 = JSON.parse(userProfile);
+console.log(email1);
 } 
 });
 
