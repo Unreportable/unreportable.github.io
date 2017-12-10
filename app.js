@@ -57,20 +57,6 @@ var buttonbuy=document.getElementById('btn-buy');
     localStorage.setItem('expires_at', expiresAt);
   }
 
-    var eee;
- /* webAuth.parseHash(window.location.hash, function(err, authResult) {
-  if (err) {
-    return console.log(err);
-  }*/
-
-  webAuth.client.userInfo(localStorage.getItem('access_token'), function(err, user) {
-    // Now you have the user's information
-  var eee = JSON.parse(localStorage.getItem('email'));
-  });
-});
-  
-console.log(eee); 
-  
   
   function logout() {
     // Remove tokens and expiry time from localStorage
@@ -105,6 +91,24 @@ console.log(eee);
     });
   }
 
+  
+    var eee;
+ /* webAuth.parseHash(window.location.hash, function(err, authResult) {
+  if (err) {
+    return console.log(err);
+  }*/
+
+  webAuth.client.userInfo(localStorage.getItem('access_token'), function(err, user) {
+    // Now you have the user's information
+  var eee = JSON.parse(localStorage.getItem('email'));
+  });
+});
+  
+console.log(eee); 
+  
+  
+  
+  
   function displayButtons() {
     if (isAuthenticated()) {
       loginBtn.style.display = 'none';
