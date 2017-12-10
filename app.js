@@ -99,12 +99,12 @@ if (profile) {
   
   var obj = JSON.parse(profile);
   console.log(obj)
-  console.log("tyta");
+  /*console.log("tyta");*/
   
   
 userProfile = profile; 
   console.log(userProfile.email);
-  console.log("vtoroe tyta");
+ /* console.log("vtoroe tyta");*/
 } else {
 
 console.log("very bad");
