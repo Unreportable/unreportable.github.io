@@ -158,7 +158,7 @@ console.log("very bad");
         li3.style.display = 'none';
         li5.style.display = 'none';
         li6.style.display = 'none';  
-     / buttonbuy2.style.display='none';
+      buttonbuy2.style.display='none';
         buttonbuy.style.display='none';
     }
   }
