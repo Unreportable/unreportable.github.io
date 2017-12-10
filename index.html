@@ -153,24 +153,24 @@ jQuery(function($){
         $("#msg").removeClass("error");
       }
       
-      if(mailvalid == true && msglen >= 4) {
+    /*  if(mailvalid == true && msglen >= 4) {
         // если обе проверки пройдены
         // сначала мы скрываем кнопку отправки
         $("#send").replaceWith("<em>отправка...</em>");
         $.ajax({
-          /*type: 'POST',
+          type: 'POST',
           url: 'sendmessage.php',
           data: $("#contact").serialize(),
           success: function(data) {
-            if(data == "true") {*/
+            if(data == "true") {
               $("#contact").fadeOut("fast", function(){
                 $(this).before("<p><strong>Успешно! Ваше сообщение отправлено  :)</strong></p>");
                 setTimeout("$.fancybox.close()", 1000);
               });
-            /*}*/
+            }
           }
         });
-      }
+      }*/
     });
   });
 </script>
