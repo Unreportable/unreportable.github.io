@@ -14,7 +14,6 @@ window.addEventListener('load', function() {
     leeway: 60
   });
 
- 
   var loginStatus = document.querySelector('.container h4');
   var loginView = document.getElementById('login-view');
   var homeView = document.getElementById('home-view');
@@ -57,7 +56,6 @@ var buttonbuy=document.getElementById('btn-buy');
     localStorage.setItem('expires_at', expiresAt);
   }
 
-  
   function logout() {
     // Remove tokens and expiry time from localStorage
     localStorage.removeItem('access_token');
@@ -91,12 +89,6 @@ var buttonbuy=document.getElementById('btn-buy');
     });
   }
 
-  
-
-  
-  
-  
-  
   function displayButtons() {
     if (isAuthenticated()) {
       loginBtn.style.display = 'none';
@@ -125,3 +117,6 @@ buttonbuy.style.display='inline-block';
   buttonbuy.style.display='none';
     }
   }
+
+  handleAuthentication();
+});
