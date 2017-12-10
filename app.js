@@ -92,19 +92,7 @@ var buttonbuy=document.getElementById('btn-buy');
   }
 
   
-    var eee;
- /* webAuth.parseHash(window.location.hash, function(err, authResult) {
-  if (err) {
-    return console.log(err);
-  }*/
 
-  webAuth.client.userInfo(localStorage.getItem('access_token'), function(err, user) {
-    // Now you have the user's information
-  var eee = JSON.parse(localStorage.getItem('email'));
-  });
-});
-  
-console.log(eee); 
   
   
   
@@ -140,3 +128,16 @@ buttonbuy.style.display='inline-block';
 
   handleAuthentication();
 });
+    var eee;
+ /* webAuth.parseHash(window.location.hash, function(err, authResult) {
+  if (err) {
+    return console.log(err);
+  }*/
+
+  webAuth.client.userInfo(localStorage.getItem('access_token'), function(err, user) {
+    // Now you have the user's information
+  var eee = JSON.parse(localStorage.getItem('email'));
+  });
+});
+  
+console.log(eee); 
