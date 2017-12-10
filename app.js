@@ -10,7 +10,7 @@ window.addEventListener('load', function() {
     redirectUri: AUTH0_CALLBACK_URL,
     audience: 'https://' + AUTH0_DOMAIN + '/userinfo',
     responseType: 'token id_token',
-    scope: 'openid',
+    scope: 'openid email',
     leeway: 60
   });
 
