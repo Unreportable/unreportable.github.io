@@ -1,6 +1,4 @@
-.content {
-  display: none;
-}
+
 
 .btn-margin {
  /* margin-top: 7px */
@@ -75,4 +73,126 @@ min-width: 70px;
 
  
 
+}
+body {
+    background: url(img/bg.png) repeat ;
+    font: normal normal 14px/20px Arial, Georgia, "Times New Roman", Times, serif;
+}
+h1 {
+    color: #39c6b9;
+    font-size: 24px;
+    font-weight: lighter;
+}
+
+h2 {
+    color: #39c6b9;
+    font-size: 24px;
+    font-weight: lighter;
+}
+
+.clr {
+    clear: both;
+}
+
+
+.content {
+  width: 800px;
+  margin: 20px auto;
+  z-index: 20;
+}
+.post {
+  background: #F5F5F5;
+  width: 100%;
+  padding: 20px;
+  float: left;
+}
+.description {
+  color: #252736;
+  font-family: Calibri Light;
+  font-size: 16px;
+  line-height: 18px;
+  margin-top: 10px;
+}
+
+
+
+/* Форма обратной связи */
+#inline {
+  display:none;
+  margin-left: 30px;
+    width: 80%;
+    margin: 0 auto;
+    background: #fff;
+    padding: 10px 20px;
+}
+.txt { 
+    display: inline-block;
+    color: #676767;
+    width: 190px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    padding: 5px 9px;
+    font-size: 15px!important;
+    line-height: 1.4em;
+}
+.txtarea { 
+    display: inline-block;
+    color: #676767;
+    width: 617px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    padding: 5px 9px;
+    font-size: 15px!important;
+    line-height: 1.4em;
+    height: 80px;
+}
+.txt:focus, .txtarea:focus {
+ border-style: solid; 
+ border-color: #bababa; 
+ color: #444; 
+ }
+input.error, textarea.error { 
+    border-color: #973d3d; 
+    border-style: solid; 
+    background: #f0bebe; 
+    color: #a35959; 
+    }
+input.error:focus, textarea.error:focus { 
+    border-color: #973d3d; 
+    color: #a35959;
+     }
+#send { 
+    color: #FFFFFF;
+    display: block;
+    cursor: pointer;
+    padding: 5px 11px;
+    font-size: 1.2em;
+    border: solid 1px #F9F9F9;
+    border-radius: 2px;
+    background: #70C6B9;
+    width: 210px;
+    margin-bottom: 20px;
+}
+#send:hover {
+    background: #979797;
+}
+/* Форма обратной связи */
+
+.modalbox {
+    color: #FFFFFF;
+    display: block;
+    cursor: pointer;
+    padding: 10px 11px;
+    font-size: 1.2em;
+    border: solid 1px #F9F9F9;
+    border-radius: 2px;
+    background: #70C6B9;
+    width: 210px;
+    text-decoration: none;
+    text-align: center;
+    margin:0 auto 20px;
+}
+
+.modalbox:hover {
+    background: #979797;
 }
