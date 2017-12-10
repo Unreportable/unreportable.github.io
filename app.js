@@ -72,7 +72,7 @@ var buttonbuy=document.getElementById('btn-buy');
   }
   
   function puc(){
-   webAuth.parseHash(function(err, authResult) {
+   webAuth.parseHash(function(err, authResult)) {
         webAuth.client.userInfo(authResult.accessToken, function(err, profile) { 
 if (profile) { 
 var userProfile = profile; 
