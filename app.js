@@ -125,19 +125,3 @@ buttonbuy.style.display='inline-block';
   buttonbuy.style.display='none';
     }
   }
-
-  handleAuthentication();
-});
-    var eee;
- /* webAuth.parseHash(window.location.hash, function(err, authResult) {
-  if (err) {
-    return console.log(err);
-  }*/
-
-  webAuth.client.userInfo(localStorage.getItem('access_token'), function(err, user) {
-    // Now you have the user's information
-  var eee = JSON.parse(localStorage.getItem('email'));
-  });
-});
-  
-console.log(eee); 
