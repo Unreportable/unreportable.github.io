@@ -6,49 +6,66 @@
   <base href="/">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.css">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="Users/Asus/Desktop/01-login/style.css">
 </head>
 <body>
 
   <div id="loading">
-    <img src="assets/loading.svg" alt="Loading spinner">
+    <img src="Users/Asus/Desktop/01-login/assets/loading.svg" alt="Loading spinner">
   </div>
 
-  <div class="content">
-    <nav class="navbar navbar-default">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="#">Auth0 - JavaScript</a>
 
-          <button id="btn-home-view" class="btn btn-primary btn-margin">
-              Home
-          </button>
 
-          <button id="btn-login" class="btn btn-primary btn-margin">
-              Log In
-          </button>
 
-          <button id="btn-logout" class="btn btn-primary btn-margin">
-              Log Out
-          </button>
-
+  <ul class="flex-container">
+    <li class="flex-item"><img class="imgClassLogo" src="Users/Asus/Desktop/01-login/raincomp2.png" alt="Mountain View"></li>
+    <li class="flex-item">  <div class="content">
+    
+        
+         
+           
+            <ul class="flex-container2">
+                <li class="flex-item">
+            <button id="btn-home-view" class="btn btn-primary btn-margin">
+                Home
+            </button>
+  </li>
+  <li class="flex-item">   <button id="btn-login" class="btn btn-primary btn-margin">
+                Log In
+            </button></li>
+            <li class="flex-item">
+            <button id="btn-logout" class="btn btn-primary btn-margin">
+                Log Out
+            </button></li>
+  
+          
+        
+      </ul>
+  
+      <main class="container">
+        <!-- home view -->
+        <div id="home-view">
+          <h4></h4>
         </div>
-      </div>
-    </nav>
+        
+      </main>
+  
+    </div></li>
+    <li id="123" class="flex-item"><img class="imgClassProduct" src="Users/Asus/Desktop/01-login/322.png" alt="Mountain View"></li>
+    <li  id="1234" class="flex-item">The Rain Company Hat</li>
+    <li  id="1235" class="flex-item">$20.00</li>
+    <li  id="1236" class="flex-item"><button id="btn-buy" class="btn btn-primary btn-margin">
+      ADD TO CART</button></li>
 
-    <main class="container">
-      <!-- home view -->
-      <div id="home-view">
-        <h4></h4>
-      </div>
-      
-    </main>
+    <li  id="1237" class="flex-item">Velcro strap / One size fits all</li>
+    <li  id="1238" class="flex-item">Shipping (RU) and tax included</li>
+  </ul>
 
-  </div>
-<script src="https://cdn.auth0.com/js/auth0/8.10.1/auth0.min.js"></script>
- <script src="auth0.js"></script>
 
-  <script src="app.js"></script>
+
+  <script src="node_modules/auth0-js/build/auth0.js"></script>
+  <script src="Users/Asus/Desktop/01-login/auth0-variables.js"></script>
+  <script src="Users/Asus/Desktop/01-login/app.js"></script>
 </body>
 </html>
