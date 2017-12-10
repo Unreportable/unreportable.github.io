@@ -5,10 +5,10 @@ window.addEventListener('load', function() {
   loadingSpinner.style.display = 'none';
 
   var webAuth = new auth0.WebAuth({
-    domain: 'unreportable.eu.auth0.com',
-    clientID: 'JDaQgVp35PQVIHyg5hR0Rgf0D7Bx7172',
-    redirectUri: 'https://unreportable.github.io/',
-    audience: 'https://unreportable.eu.auth0.com/userinfo',
+    domain: AUTH0_DOMAIN,
+    clientID: AUTH0_CLIENT_ID,
+    redirectUri: AUTH0_CALLBACK_URL,
+    audience: 'https://' + AUTH0_DOMAIN + '/userinfo',
     responseType: 'token id_token',
     scope: 'openid',
     leeway: 60
@@ -17,6 +17,17 @@ window.addEventListener('load', function() {
   var loginStatus = document.querySelector('.container h4');
   var loginView = document.getElementById('login-view');
   var homeView = document.getElementById('home-view');
+
+
+
+  var li1 = document.getElementById('123');
+  var li2 = document.getElementById('1234');
+  var li3 = document.getElementById('1235');
+  var li4 = document.getElementById('1236');
+  var li5 = document.getElementById('1237');
+  var li6 = document.getElementById('1238');
+
+
 
   // buttons and event listeners
   var homeViewBtn = document.getElementById('btn-home-view');
@@ -83,11 +94,27 @@ window.addEventListener('load', function() {
       loginBtn.style.display = 'none';
       logoutBtn.style.display = 'inline-block';
       loginStatus.innerHTML = 'You are logged in!';
+
+      li1.style.display = 'block';
+      li2.style.display = 'block';
+      li3.style.display = 'block';
+      li4.style.display = 'block';
+      li5.style.display = 'block';
+      li6.style.display = 'block';
+
+      
     } else {
       loginBtn.style.display = 'inline-block';
       logoutBtn.style.display = 'none';
       loginStatus.innerHTML =
         'You are not logged in! Please log in to continue.';
+        li1.style.display = 'none';
+        li2.style.display = 'none';
+        li3.style.display = 'none';
+        li4.style.display = 'none';
+        li5.style.display = 'none';
+        li6.style.display = 'none';
+  
     }
   }
 
