@@ -96,6 +96,12 @@ console.log(email1);
   var accessToken1 = localStorage.getItem('access_token');
   webAuth.client.userInfo(accessToken1, function(err, profile) { 
 if (profile) { 
+  
+  var obj = JSON.parse(profile);
+  console.log(obj)
+  
+  
+  
 userProfile = profile; 
   console.log(userProfile.email);
   
