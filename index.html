@@ -1,12 +1,29 @@
 <!doctype html>
 <html>
 <head>
-  
+  <meta charset="UTF-8">
   <meta charset="utf-8">
   <title>Umbrella - The Rain Company</title>
   <link rel = "shortcut icon" href = "https://firebasestorage.googleapis.com/v0/b/storied-groove-188117.appspot.com/o/2000px-U%2B2602.svg.png?alt=media&token=4573d51f-78d5-47d3-ab77-b5e96212b72b" type = "image/x-icon">
   <base href="/">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="normalize.css">
+<title>Форма обратной связи</title>
+ <link rel="shortcut icon" href="favicon.png" type="image/png">
 
+
+<link rel="stylesheet" type="text/css" media="all" href="fancybox/jquery.fancybox.css">
+<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="fancybox/jquery.fancybox.js"></script>
+
+
+ <script type="text/javascript" src="js/jquery.maskedinput.js"></script>
+ <script type="text/javascript">
+jQuery(function($){
+   $("#phone").mask("+7 (999) 999-9999");
+   $("#phone2").mask("+7 (999) 999-9999");
+});
+</script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.css">
   <link rel="stylesheet" href="style.css">
@@ -59,7 +76,20 @@
     <li  id="1235" class="flex-item">$20.00</li>
     <li  id="1236" class="flex-item"><button id="btn-buy" class="btn btn-primary btn-margin">
       ADD TO CART</button></li>
+     <li  id="12367" class="flex-item">
+    <a href="#inline" class="modalbox">Обратный звонок</a>
 
+<div id="inline">
+  <h2>Онлайн заявка</h2>
+  <form id="contact" name="contact" action="#" method="post">
+    <input type="name" id="name" name="name" class="txt" placeholder="Ваше имя">
+    <input type="phone" id="phone" name="phone" class="txt" placeholder="Ваш телефон">
+    <input type="email" id="email" name="email" class="txt" placeholder="Ваш e-mail"> 
+    <textarea id="msg" name="msg" class="txtarea"  placeholder="Ваше сообщение:"></textarea>
+    <button id="send">Отправить</button>
+  </form>
+</div>
+    </li>
     <li  id="1237" class="flex-item">Velcro strap / One size fits all</li>
     <li  id="1238" class="flex-item">Shipping (RU) and tax included</li>
   </ul>
@@ -81,5 +111,68 @@
   <script src="auth0.js"></script>
   <script src="auth0-variables.js"></script>
   <script src="app.js"></script>
+  <script type="text/javascript">
+  function validateEmail(email) { 
+    var reg = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return reg.test(email);
+  }
+
+  $(document).ready(function() {
+    $(".modalbox").fancybox();
+    $("#contact").submit(function() { return false; });
+    $("#send").on("click", function(){
+      var emailval  = $("#email").val();
+      var namevl  = $("#name").val();
+      var phonevl  = $("#phone").val();
+      var msgval    = $("#msg").val();
+      var msglen    = msgval.length;
+      var mailvalid = validateEmail(emailval);
+
+      if(mailvalid == false) {
+        $("#email").addClass("error");
+      }
+      else if(mailvalid == true){
+        $("#email").removeClass("error");
+      }
+  if(mailvalid == false) {
+        $("#name").addClass("error");
+      }
+      else if(mailvalid == true){
+        $("#name").removeClass("error");
+      }
+      if(mailvalid == false) {
+        $("#phone").addClass("error");
+      }
+      else if(mailvalid == true){
+        $("#phone").removeClass("error");
+      }
+      if(msglen < 4) {
+        $("#msg").addClass("error");
+      }
+      else if(msglen >= 4){
+        $("#msg").removeClass("error");
+      }
+      
+      if(mailvalid == true && msglen >= 4) {
+        // если обе проверки пройдены
+        // сначала мы скрываем кнопку отправки
+        $("#send").replaceWith("<em>отправка...</em>");
+        $.ajax({
+          type: 'POST',
+          url: 'sendmessage.php',
+          data: $("#contact").serialize(),
+          success: function(data) {
+            if(data == "true") {
+              $("#contact").fadeOut("fast", function(){
+                $(this).before("<p><strong>Успешно! Ваше сообщение отправлено  :)</strong></p>");
+                setTimeout("$.fancybox.close()", 1000);
+              });
+            }
+          }
+        });
+      }
+    });
+  });
+</script>
 </body>
 </html>
