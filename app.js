@@ -14,6 +14,18 @@ window.addEventListener('load', function() {
     leeway: 60
   });
 
+  
+  webAuth.parseHash(window.location.hash, function(err, authResult) {
+  if (err) {
+    return console.log(err);
+  }
+
+  webAuth.client.userInfo(authResult.accessToken, function(err, user) {
+    // Now you have the user's information
+  });
+});
+  
+  
   var loginStatus = document.querySelector('.container h4');
   var loginView = document.getElementById('login-view');
   var homeView = document.getElementById('home-view');
