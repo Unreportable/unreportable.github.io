@@ -85,10 +85,20 @@ var buttonbuy=document.getElementById('btn-buy');
           'Error: ' + err.error + '. Check the console for further details.'
         );
       }
+        webAuth.client.userInfo(accessToken, function(err, profile) { 
+if (profile) { 
+var userProfile = profile; 
+  var email1 = JSON.parse(userProfile);
+console.log(email1);
+} 
+});
       displayButtons();
     });
   }
 
+
+
+  
   function displayButtons() {
     if (isAuthenticated()) {
       loginBtn.style.display = 'none';
@@ -121,12 +131,5 @@ buttonbuy.style.display='inline-block';
   handleAuthentication();
 });
 
-webAuth.client.userInfo(accessToken, function(err, profile) { 
-if (profile) { 
-var userProfile = profile; 
-  var email1 = JSON.parse(userProfile);
-console.log(email1);
-} 
-});
 
 
