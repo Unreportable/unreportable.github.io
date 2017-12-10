@@ -93,8 +93,8 @@ console.log(email1);
   function dispemail(){
   
   
-  var accessToken = localStorage.getItem('access_token');
-  webAuth.client.userInfo(accessToken, function(err, profile) { 
+  var accessToken1 = localStorage.getItem('access_token');
+  webAuth.client.userInfo(accessToken1, function(err, profile) { 
 if (profile) { 
 userProfile = profile; 
   console.log("bil tyt");
@@ -103,12 +103,8 @@ userProfile = profile;
 
 console.log("very bad");
 
-
 }
 });
-  
-  
-  
   }
   
   
@@ -153,9 +149,8 @@ console.log("very bad");
         li2.style.display = 'none';
         li3.style.display = 'none';
         li5.style.display = 'none';
-        li6.style.display = 'none';
-     
-  buttonbuy.style.display='none';
+        li6.style.display = 'none';    
+        buttonbuy.style.display='none';
     }
   }
   handleAuthentication();
