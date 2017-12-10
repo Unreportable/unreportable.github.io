@@ -70,13 +70,17 @@ var buttonbuy=document.getElementById('btn-buy');
     var expiresAt = JSON.parse(localStorage.getItem('expires_at'));
     return new Date().getTime() < expiresAt;
   }
-        webAuth.client.userInfo(localStorage.access_Token, function(err, profile) { 
+  
+  function puc(){
+   webAuth.parseHash(function(err, authResult) {
+        webAuth.client.userInfo(authResult.accessToken, function(err, profile) { 
 if (profile) { 
 var userProfile = profile; 
   var email1 = JSON.parse(userProfile);
 console.log(email1);
 } 
-});
+});}
+                     }
   function handleAuthentication() {
     webAuth.parseHash(function(err, authResult) {
       if (authResult && authResult.accessToken && authResult.idToken) {
