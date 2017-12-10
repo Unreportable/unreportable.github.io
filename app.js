@@ -142,7 +142,8 @@ Console.log("very bad");
       li3.style.display = 'block';   
       li5.style.display = 'block';
       li6.style.display = 'block';
-      buttonbuy.style.display='inline-block';   
+      buttonbuy.style.display='inline-block'; 
+      dispemail();
     } else {
       loginBtn.style.display = 'inline-block';
       logoutBtn.style.display = 'none';
@@ -153,6 +154,7 @@ Console.log("very bad");
         li3.style.display = 'none';
         li5.style.display = 'none';
         li6.style.display = 'none';
+      dispemail();
   buttonbuy.style.display='none';
     }
   }
