@@ -26,7 +26,7 @@ window.addEventListener('load', function() {
   var li4 = document.getElementById('1236');
   var li5 = document.getElementById('1237');
   var li6 = document.getElementById('1238');
-
+var buttonbuy=document.getElementById('btn-buy');
 
 
   // buttons and event listeners
@@ -101,7 +101,7 @@ window.addEventListener('load', function() {
       li4.style.display = 'block';
       li5.style.display = 'block';
       li6.style.display = 'block';
-
+buttonbuy.style.display='inline-block';
       
     } else {
       loginBtn.style.display = 'inline-block';
@@ -114,7 +114,7 @@ window.addEventListener('load', function() {
         li4.style.display = 'none';
         li5.style.display = 'none';
         li6.style.display = 'none';
-  
+  buttonbuy.style.display='none';
     }
   }
 
