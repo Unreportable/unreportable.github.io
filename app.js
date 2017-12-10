@@ -27,7 +27,7 @@ window.addEventListener('load', function() {
   var li5 = document.getElementById('1237');
   var li6 = document.getElementById('1238');
 var buttonbuy=document.getElementById('btn-buy');
-
+var buttonbuy2 = document.getElementById('123678');
 
   // buttons and event listeners
   var homeViewBtn = document.getElementById('btn-home-view');
@@ -144,7 +144,9 @@ console.log("very bad");
       li3.style.display = 'block';   
       li5.style.display = 'block';
       li6.style.display = 'block';
-      buttonbuy.style.display='inline-block'; 
+      buttonbuy.style.display='inline-block';
+      buttonbuy2.style.display='block';
+      
       dispemail();
     } else {
       loginBtn.style.display = 'inline-block';
@@ -155,7 +157,8 @@ console.log("very bad");
         li2.style.display = 'none';
         li3.style.display = 'none';
         li5.style.display = 'none';
-        li6.style.display = 'none';    
+        li6.style.display = 'none';  
+       buttonbuy2.style.display='none';
         buttonbuy.style.display='none';
     }
   }
