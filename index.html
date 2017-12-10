@@ -163,8 +163,8 @@ jQuery(function($){
           data: $("#contact").serialize(),
           success: function(data) {
             if(data == "true") {
-              $("#contact").fadeOut("fast", function(){*/
-                $(this).before("<p><strong>Успешно! Ваше сообщение отправлено  :)</strong></p>");
+              $("#contact").fadeOut("fast", function(){
+                $(this).before("<p><strong>Успешно! Ваше сообщение отправлено  :)</strong></p>");*/
                 setTimeout("$.fancybox.close()", 1000);
               });
             }
