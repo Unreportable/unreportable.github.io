@@ -3,7 +3,9 @@
 }
 
 .btn-margin {
-  margin-top: 7px
+ /* margin-top: 7px */
+  display:none;
+  margin: 0 auto;
 }
 
 #login-view {
@@ -21,4 +23,56 @@
   left: 0;
   right: 0;
   background-color: #fff;
+}
+
+
+.imgClassLogo {
+max-width: 430px;
+max-height: 180px;
+object-fit: cover;
+min-height: 30px;
+min-width: 70px;
+}
+.imgClassProduct {
+  max-width: 240px;
+  max-height: 240px;
+  min-height: 110px;
+  min-width: 110px;
+  object-fit: cover;
+
+  }
+
+.flex-container {
+  padding: 0;
+  display: flex;
+  margin-top: 20px;
+ 
+  list-style-type: none;
+  flex-direction: column;
+
+ 
+
+}
+
+.flex-item {
+    /*background;*/
+  padding: 5px;
+ display: block;
+  list-style-type: none;
+  margin-top: 10px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.flex-container2 {
+  padding: 0;
+  display: flex;
+  margin-top: 20px;
+  align-items: center;
+  list-style-type: none;
+  justify-content: center;
+  flex-direction: row;
+
+ 
+
 }
