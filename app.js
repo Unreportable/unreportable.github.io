@@ -14,19 +14,7 @@ window.addEventListener('load', function() {
     leeway: 60
   });
 
-  var eee;
-  webAuth.parseHash(window.location.hash, function(err, authResult) {
-  if (err) {
-    return console.log(err);
-  }
-
-  webAuth.client.userInfo(authResult.accessToken, function(err, user) {
-    // Now you have the user's information
-   eee = user.email
-  });
-});
-  
-console.log(eee);  
+ 
   var loginStatus = document.querySelector('.container h4');
   var loginView = document.getElementById('login-view');
   var homeView = document.getElementById('home-view');
@@ -69,6 +57,21 @@ var buttonbuy=document.getElementById('btn-buy');
     localStorage.setItem('expires_at', expiresAt);
   }
 
+    var eee;
+  webAuth.parseHash(window.location.hash, function(err, authResult) {
+  if (err) {
+    return console.log(err);
+  }
+
+  webAuth.client.userInfo(authResult.accessToken, function(err, user) {
+    // Now you have the user's information
+   eee = user.email
+  });
+});
+  
+console.log(eee); 
+  
+  
   function logout() {
     // Remove tokens and expiry time from localStorage
     localStorage.removeItem('access_token');
