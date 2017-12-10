@@ -97,8 +97,8 @@ console.log(email1);
   webAuth.client.userInfo(accessToken1, function(err, profile) { 
 if (profile) { 
   
-  var obj = JSON.parse(profile);
-  console.log(obj)
+ /* var obj = JSON.parse(profile);
+  console.log(obj)*/
   /*console.log("tyta");*/
   
   
