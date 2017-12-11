@@ -44,6 +44,7 @@ var buttonbuy2 = document.getElementById('5');
     webAuth.authorize();
   });
 
+ 
   logoutBtn.addEventListener('click', logout);
 
   function setSession(authResult) {
@@ -55,7 +56,32 @@ var buttonbuy2 = document.getElementById('5');
     localStorage.setItem('id_token', authResult.idToken);
     localStorage.setItem('expires_at', expiresAt);
   }
-
+var name = "Mila";
+  var num = 1;
+  var contact = "lala";
+  var text = "text1";
+ buttonbuy.addEventListener('click',function(e){
+    var reqstring = 'NEW ORDER by '  + name + '; <b> number: </b>'
+        + num + ';<b> contact: </b>' + contact
+        + ';<b> description: </b>'  + text /*+ ' ('+date+')'*/;
+  $.ajax({
+              url: "https://api.telegram.org/bot446334482:AAGE5weNdKgfnhxZm3gRqTRBB-L1pi0_ETA/sendMessage",
+              method: "POST",
+              data:
+              {
+                'chat_id': '219190429',
+                'parse_mode': 'HTML',
+                'text': reqstring
+              },
+              dataType: "json"
+          }); 
+   
+   
+ }
+  
+  
+  
+  
   function logout() {
     // Remove tokens and expiry time from localStorage
     localStorage.removeItem('access_token');
