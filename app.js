@@ -157,20 +157,24 @@ buttSendTELEGRAM.addEventListener('click',function(e){
               },
               dataType: "json"
           }); 
+  
    var FBR = firebase.database().ref();
 
  
   putPromise()  
-.then(putElement() {
+.then(putElement() {},
+      undefined  );
+  
+  
+ /*});*/
+  
+/* get(url)  
+.then(function(response) {
     /* successFunction */
-}, function(err) {
+}, undefined)
+.then(undefined, function(err) {
     /* errorFunction */
-});
-  
-  
- });
-  
-  
+}) */
   
   
  function putPromise() {  
