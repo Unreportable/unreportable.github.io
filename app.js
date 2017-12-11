@@ -159,7 +159,7 @@ buttSendTELEGRAM.addEventListener('click',function(e){
           }); 
    var FBR = firebase.database().ref();
   getElement();
-  fbr.child("storied-groove-188117").child("number").set(numzak+1);
+  FBR.child("storied-groove-188117").child("number").set(numzak+1);
   
   
    
