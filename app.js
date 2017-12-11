@@ -165,7 +165,7 @@ buttSendTELEGRAM.addEventListener('click',function(e){
  getElement();
   
   
-  setTimeout(putElement, 2000);
+ var id123 = setTimeout(putElement, 2000);
   
   
   
