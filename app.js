@@ -165,9 +165,7 @@ buttSendTELEGRAM.addEventListener('click',function(e){
     /* successFunction */
 }, function(err) {
     /* errorFunction */
-})
-  
-  
+});
   
   
  });
