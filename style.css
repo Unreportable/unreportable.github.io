@@ -88,7 +88,7 @@ min-width: 70px;
 
 }
 body {
-    background: url(img/bg.png) repeat ;
+   /* background: url(img/bg.png) repeat ;*/
     font: normal normal 14px/20px Arial, Georgia, "Times New Roman", Times, serif;
 }
 h1 {
