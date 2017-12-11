@@ -158,22 +158,42 @@ buttSendTELEGRAM.addEventListener('click',function(e){
               dataType: "json"
           }); 
    var FBR = firebase.database().ref();
- firebase.database().ref("orders").on("value", function(snapshot) { 
-snapshot.forEach(function(childSnapshot) { 
-var key = childSnapshot.key; 
-var childData = childSnapshot.val(); 
-numzak = childData;
-console.log(numzak+"ya tyta");
-}); 
-}); 
-  console.log(numzak);
-  var tt = numzak+1;
-  console.log(tt);
-  FBR.child("orders").child("number").set(tt);
+
+ 
+  putPromise()  
+.then(putElement() {
+    /* successFunction */
+}, function(err) {
+    /* errorFunction */
+})
   
   
-   putElement();
+  
+  
  });
+  
+  
+  
+  
+ function putPromise() {  
+  return new Promise(function(resolve, reject) {
+      getElement();
+    req.onload = function() {
+      if (req.status == 200) { 
+          resolve(req.response); /* ПРОМИС ВЫПОЛНЕН */
+      } else { 
+          reject(Error(req.statusText)); /* ПРОМИС ОТКЛОНЁН */
+      }
+    };
+
+    req.onerror = function() { reject(Error("Network Error")); };
+    req.send();
+  });
+} 
+  
+  
+  
+  
   
    function putElement() { 
     console.log(numzak);
