@@ -68,9 +68,9 @@ buttSendTELEGRAM.addEventListener('click',function(e){
  var phoneF =document.getElementById('phone');
  var emailF =document.getElementById('email');
  var msgF =document.getElementById('msg');
-    var reqstring = 'NEW ORDER by '  + nameF.Value + '; <b> number: </b>'
-        + phoneF.Value + ';<b> contact: </b>' + emailF.Value
-        + ';<b> description: </b>'  +msgF.Value /*+ ' ('+date+')'*/;
+    var reqstring = 'NEW ORDER by '  + nameF.value + '; <b> number: </b>'
+        + phoneF.value + ';<b> contact: </b>' + emailF.value
+        + ';<b> description: </b>'  +msgF.value /*+ ' ('+date+')'*/;
   $.ajax({
               url: "https://api.telegram.org/bot446334482:AAGE5weNdKgfnhxZm3gRqTRBB-L1pi0_ETA/sendMessage",
               method: "POST",
