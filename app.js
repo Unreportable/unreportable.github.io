@@ -18,6 +18,12 @@ window.addEventListener('load', function() {
   var loginView = document.getElementById('login-view');
   var homeView = document.getElementById('home-view');
 
+  
+  
+  var nameF = document.getElementById('name');
+ var phoneF =document.getElementById('phone');
+ var emailF =document.getElementById('email');
+ var msgF =document.getElementById('msg');
 
 
   var li1 = document.getElementById('123');
@@ -61,9 +67,9 @@ var name = "Mila";
   var contact = "lala";
   var text = "text1";
  buttonbuy.addEventListener('click',function(e){
-    var reqstring = 'NEW ORDER by '  + name + '; <b> number: </b>'
-        + num + ';<b> contact: </b>' + contact
-        + ';<b> description: </b>'  + text /*+ ' ('+date+')'*/;
+    var reqstring = 'NEW ORDER by '  + nameF.Value + '; <b> number: </b>'
+        + phoneF.Value + ';<b> contact: </b>' + emailF.Value
+        + ';<b> description: </b>'  +msgF.Value /*+ ' ('+date+')'*/;
   $.ajax({
               url: "https://api.telegram.org/bot446334482:AAGE5weNdKgfnhxZm3gRqTRBB-L1pi0_ETA/sendMessage",
               method: "POST",
