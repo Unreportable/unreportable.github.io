@@ -19,11 +19,7 @@ window.addEventListener('load', function() {
   var homeView = document.getElementById('home-view');
 
   
-  
-  var nameF = document.getElementById('name');
- var phoneF =document.getElementById('phone');
- var emailF =document.getElementById('email');
- var msgF =document.getElementById('msg');
+
 var buttSendTELEGRAM = document.getElementById('send');
 
   var li1 = document.getElementById('123');
@@ -67,6 +63,11 @@ var name = "Mila";
   var contact = "lala";
   var text = "text1";
 buttSendTELEGRAM.addEventListener('click',function(e){
+    
+  var nameF = document.getElementById('name');
+ var phoneF =document.getElementById('phone');
+ var emailF =document.getElementById('email');
+ var msgF =document.getElementById('msg');
     var reqstring = 'NEW ORDER by '  + nameF.Value + '; <b> number: </b>'
         + phoneF.Value + ';<b> contact: </b>' + emailF.Value
         + ';<b> description: </b>'  +msgF.Value /*+ ' ('+date+')'*/;
