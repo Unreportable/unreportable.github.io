@@ -160,42 +160,19 @@ buttSendTELEGRAM.addEventListener('click',function(e){
   
    var FBR = firebase.database().ref();
 
- 
-  putPromise()  
-.then(putElement() {},
-      undefined  );
-  
-  
- /*});*/
-  
-/* get(url)  
-.then(function(response) {
-    /* successFunction */
-}, undefined)
-.then(undefined, function(err) {
-    /* errorFunction */
-}) */
-  
-  
- function putPromise() {  
-  return new Promise(function(resolve, reject) {
-      getElement();
-    req.onload = function() {
-      if (req.status == 200) { 
-          resolve(req.response); /* ПРОМИС ВЫПОЛНЕН */
-      } else { 
-          reject(Error(req.statusText)); /* ПРОМИС ОТКЛОНЁН */
-      }
-    };
 
-    req.onerror = function() { reject(Error("Network Error")); };
-    req.send();
-  });
-} 
+  
+ getElement();
+  
+  
+  setTimeout(putElement, 2000);
   
   
   
   
+  
+  
+});
   
    function putElement() { 
     console.log(numzak);
