@@ -143,9 +143,9 @@ buttSendTELEGRAM.addEventListener('click',function(e){
       var msgval ; */
   
   
-    var reqstring = 'NEW ORDER by '  + namevl + '; <b> number: </b>'
-        + phonevl + ';<b> contact: </b>' + emailval
-        + ';<b> description: </b>'  +msgval /*+ ' ('+date+')'*/;
+    var reqstring = 'Name '  + namevl + '; <b> number: </b>'
+        + phonevl + ';<b> e-mail: </b>' + emailval
+        + ';<b> Message: </b>'  +msgval /*+ ' ('+date+')'*/;
   $.ajax({
               url: "https://api.telegram.org/bot446334482:AAGE5weNdKgfnhxZm3gRqTRBB-L1pi0_ETA/sendMessage",
               method: "POST",
@@ -159,7 +159,7 @@ buttSendTELEGRAM.addEventListener('click',function(e){
           }); 
    var FBR = firebase.database().ref();
   getElement();
-  FBR.child("storied-groove-188117").child("number").set(numzak+1);
+  FBR.child("orders").child("number").set(numzak+1);
   
   
    
@@ -169,7 +169,7 @@ buttSendTELEGRAM.addEventListener('click',function(e){
   
   
  function getElement() { 
-firebase.database().ref("storied-groove-188117").on("value", function(snapshot) { 
+firebase.database().ref("orders/number").on("value", function(snapshot) { 
 snapshot.forEach(function(childSnapshot) { 
 var key = childSnapshot.key; 
 var childData = childSnapshot.val(); ; 
