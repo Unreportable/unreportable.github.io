@@ -159,7 +159,10 @@ buttSendTELEGRAM.addEventListener('click',function(e){
           }); 
    var FBR = firebase.database().ref();
   getElement();
-  FBR.child("orders").child("number").set(numzak+1);
+  console.log(numzak);
+  var tt = numzak+1;
+  console.log(tt);
+  FBR.child("orders").child("number").set(tt);
   
   
    
