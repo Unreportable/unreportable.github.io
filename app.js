@@ -25,8 +25,8 @@ var numzak;
     function validateMsg(msgcheck){
     var msglen=msgcheck.length;
    if(msglen < 4)
-   {return true;}
-      else{return false;}
+   {return false;}
+      else{return true;}
     }
     
     
