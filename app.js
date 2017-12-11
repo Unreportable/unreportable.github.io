@@ -173,10 +173,11 @@ firebase.database().ref("storied-groove-188117").on("value", function(snapshot) 
 snapshot.forEach(function(childSnapshot) { 
 var key = childSnapshot.key; 
 var childData = childSnapshot.val(); ; 
-numzak = childData; 
+numzak = childData;
+
 }); 
 }); 
-  
+ } 
   
   function logout() {
     // Remove tokens and expiry time from localStorage
