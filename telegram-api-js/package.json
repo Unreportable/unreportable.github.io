@@ -1,0 +1,84 @@
+{
+  "_from": "telegram-api-js",
+  "_id": "telegram-api-js@1.2.9",
+  "_inBundle": false,
+  "_integrity": "sha1-XYWF65MRH365472+Blf7p/3tgH8=",
+  "_location": "/telegram-api-js",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "telegram-api-js",
+    "name": "telegram-api-js",
+    "escapedName": "telegram-api-js",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/telegram-api-js/-/telegram-api-js-1.2.9.tgz",
+  "_shasum": "5d8585eb93111f7eb9e3bdbe0657fba7fded807f",
+  "_spec": "telegram-api-js",
+  "_where": "C:\\Users\\Asus",
+  "author": {
+    "name": "Infinnity Solutions",
+    "email": "info@infinnity.ru"
+  },
+  "bugs": {
+    "url": "https://github.com/sunriselink/TelegramApi/issues"
+  },
+  "bundleDependencies": false,
+  "contributors": [
+    {
+      "name": "Maxim Sadofyev",
+      "email": "m.sadofyev@infinnity.ru"
+    },
+    {
+      "name": "Dinara Zaripova",
+      "email": "d.zaripova@infinnity.ru"
+    }
+  ],
+  "deprecated": false,
+  "description": "JavaScript library for using Telegram API.",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-concat": "^2.6.0",
+    "gulp-load-plugins": "^1.3.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.5.4",
+    "gulp-uglify": "^2.0.0",
+    "gulp-webserver": "^0.9.1",
+    "gulp-wrapper": "^1.0.0",
+    "ioc-js": "0.0.4",
+    "jsdoc-to-markdown": "^2.0.1",
+    "long": "3.2.0",
+    "rusha": "0.8.4",
+    "zlibjs": "0.2.0"
+  },
+  "homepage": "https://github.com/sunriselink/TelegramApi#readme",
+  "keywords": [
+    "telegram",
+    "telegramapi",
+    "webogram",
+    "infinnity",
+    "infinnitysolutions"
+  ],
+  "license": "GPL-3.0",
+  "name": "telegram-api-js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sunriselink/TelegramApi.git"
+  },
+  "scripts": {
+    "build": "gulp build",
+    "build-doc": "node docs/build.js",
+    "build-lib": "npm i && npm run build",
+    "example": "npm run build && gulp copy",
+    "start": "npm run example && gulp server"
+  },
+  "version": "1.2.9"
+}
