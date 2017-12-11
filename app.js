@@ -175,9 +175,9 @@ buttSendTELEGRAM.addEventListener('click',function(e){
 firebase.database().ref("orders/").on("value", function(snapshot) { 
 snapshot.forEach(function(childSnapshot) { 
 var key = childSnapshot.key; 
-var childData = childSnapshot.val(); ; 
+var childData = childSnapshot.val();  
 numzak = childData;
-
+console.log(numzak+"ya tyta");
 }); 
 }); 
  } 
