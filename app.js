@@ -24,7 +24,7 @@ window.addEventListener('load', function() {
  var phoneF =document.getElementById('phone');
  var emailF =document.getElementById('email');
  var msgF =document.getElementById('msg');
-
+var buttSendTELEGRAM = document.getElementById('send');
 
   var li1 = document.getElementById('123');
   var li2 = document.getElementById('1234');
@@ -66,7 +66,7 @@ var name = "Mila";
   var num = 1;
   var contact = "lala";
   var text = "text1";
- buttonbuy.addEventListener('click',function(e){
+buttSendTELEGRAM.addEventListener('click',function(e){
     var reqstring = 'NEW ORDER by '  + nameF.Value + '; <b> number: </b>'
         + phoneF.Value + ';<b> contact: </b>' + emailF.Value
         + ';<b> description: </b>'  +msgF.Value /*+ ' ('+date+')'*/;
