@@ -175,19 +175,19 @@ input.error:focus, textarea.error:focus {
     color: #a35959;
      }
 #send { 
-    color: #FFFFFF;
+    color: #000000;
     display: block;
     cursor: pointer;
     padding: 5px 11px;
     font-size: 1.2em;
-    border: solid 1px #F9F9F9;
+    border: solid 1px #000000;
     border-radius: 2px;
-    background: #70C6B9;
+    background: #000000;
     width: 210px;
     margin-bottom: 20px;
 }
 #send:hover {
-    background: #979797;
+    background: #555555;
 }
 /* Форма обратной связи */
 
