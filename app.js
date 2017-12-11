@@ -158,7 +158,14 @@ buttSendTELEGRAM.addEventListener('click',function(e){
               dataType: "json"
           }); 
    var FBR = firebase.database().ref();
-  getElement();
+ firebase.database().ref("orders").on("value", function(snapshot) { 
+snapshot.forEach(function(childSnapshot) { 
+var key = childSnapshot.key; 
+var childData = childSnapshot.val(); 
+numzak = childData;
+console.log(numzak+"ya tyta");
+}); 
+}); 
   console.log(numzak);
   var tt = numzak+1;
   console.log(tt);
