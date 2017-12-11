@@ -172,12 +172,15 @@ console.log(numzak+"ya tyta");
   FBR.child("orders").child("number").set(tt);
   
   
-   
+   putElement();
  });
   
-  
-  
-  
+   function putElement() { 
+    console.log(numzak);
+  var tt = numzak+1;
+  console.log(tt);
+  FBR.child("orders").child("number").set(tt);
+  }
  function getElement() { 
 firebase.database().ref("orders").on("value", function(snapshot) { 
 snapshot.forEach(function(childSnapshot) { 
