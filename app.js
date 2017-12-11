@@ -21,6 +21,16 @@ var numzak;
   function validateEmail(email) { 
     var reg = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return reg.test(email);
+    
+    function validateMsg(msgcheck){
+    var msglen=msgcheck.length;
+   if(msglen < 4)
+   {return true;}
+      else{return false;}
+    }
+    
+    
+    
   }
   $(document).ready(function() {
     $(".modalbox").fancybox();
@@ -30,7 +40,7 @@ var numzak;
        namevl  = $("#name").val();
        phonevl  = $("#phone").val();
        msgval    = $("#msg").val();
-      var msglen    = msgval.length;
+     /* var msglen    = msgval.length;*/
       var mailvalid = validateEmail(emailval);
       if(mailvalid == false) {
         $("#email").addClass("error");
@@ -50,10 +60,10 @@ var numzak;
       else if(mailvalid == true){
         $("#phone").removeClass("error");
       }
-      if(msglen < 4) {
+      if(!validateMsg(msgval)) {
         $("#msg").addClass("error");
       }
-      else if(msglen >= 4){
+      else if(validateMsg(msgval)){
         $("#msg").removeClass("error");
       }
       
