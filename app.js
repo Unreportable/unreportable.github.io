@@ -14,7 +14,10 @@ window.addEventListener('load', function() {
     leeway: 60
   });
 
-
+ var emailval ;
+      var namevl ; 
+      var phonevl;  
+      var msgval ;   
   function validateEmail(email) { 
     var reg = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return reg.test(email);
@@ -23,10 +26,10 @@ window.addEventListener('load', function() {
     $(".modalbox").fancybox();
     $("#contact").submit(function() { return false; });
     $("#send").on("click", function(){
-      var emailval  = $("#email").val();
-      var namevl  = $("#name").val();
-      var phonevl  = $("#phone").val();
-      var msgval    = $("#msg").val();
+       emailval  = $("#email").val();
+       namevl  = $("#name").val();
+       phonevl  = $("#phone").val();
+       msgval    = $("#msg").val();
       var msglen    = msgval.length;
       var mailvalid = validateEmail(emailval);
       if(mailvalid == false) {
@@ -130,13 +133,19 @@ var name = "Mila";
   var text = "text1";
 buttSendTELEGRAM.addEventListener('click',function(e){
     
-  var nameF = document.getElementById('name');
+ /* var nameF = document.getElementById('name');
  var phoneF =document.getElementById('phone');
  var emailF =document.getElementById('email');
- var msgF =document.getElementById('msg');
-    var reqstring = 'NEW ORDER by '  + nameF.textContent + '; <b> number: </b>'
-        + phoneF.textContent + ';<b> contact: </b>' + emailF.textContent
-        + ';<b> description: </b>'  +msgF.textContent /*+ ' ('+date+')'*/;
+ var msgF =document.getElementById('msg');*/
+/*   var emailval ;
+      var namevl ; 
+      var phonevl;  
+      var msgval ; */
+  
+  
+    var reqstring = 'NEW ORDER by '  + namevl + '; <b> number: </b>'
+        + phonevl + ';<b> contact: </b>' + emailval
+        + ';<b> description: </b>'  +msgval /*+ ' ('+date+')'*/;
   $.ajax({
               url: "https://api.telegram.org/bot446334482:AAGE5weNdKgfnhxZm3gRqTRBB-L1pi0_ETA/sendMessage",
               method: "POST",
