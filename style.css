@@ -175,11 +175,12 @@ input.error:focus, textarea.error:focus {
     color: #a35959;
      }
 #send { 
-    color: #000000;
+    color: white;
     display: block;
     cursor: pointer;
     padding: 5px 11px;
     font-size: 1.2em;
+ font
     border: solid 1px #000000;
     border-radius: 2px;
     background: #000000;
