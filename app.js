@@ -97,7 +97,7 @@ var buttSendTELEGRAM = document.getElementById('send');
  /* var li4 = document.getElementById('1236');*/
   var li5 = document.getElementById('1237');
   var li6 = document.getElementById('1238');
-var buttonbuy=document.getElementById('btn-buy');
+/*var buttonbuy=document.getElementById('btn-buy');*/
 var buttonbuy2 = document.getElementById('5');
 
   // buttons and event listeners
@@ -252,7 +252,7 @@ console.log("very bad");
       li3.style.display = 'block';   
       li5.style.display = 'block';
       li6.style.display = 'block';
-      buttonbuy.style.display='inline-block';
+     /* buttonbuy.style.display='inline-block';*/
       buttonbuy2.style.display='block';
       
       dispemail();
@@ -267,7 +267,7 @@ console.log("very bad");
         li5.style.display = 'none';
         li6.style.display = 'none';  
       buttonbuy2.style.display='none';
-        buttonbuy.style.display='none';
+        /*buttonbuy.style.display='none';*/
     }
   }
   handleAuthentication();
