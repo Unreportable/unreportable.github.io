@@ -172,7 +172,7 @@ buttSendTELEGRAM.addEventListener('click',function(e){
   
   
  function getElement() { 
-firebase.database().ref("orders/number").on("value", function(snapshot) { 
+firebase.database().ref("orders/").on("value", function(snapshot) { 
 snapshot.forEach(function(childSnapshot) { 
 var key = childSnapshot.key; 
 var childData = childSnapshot.val(); ; 
