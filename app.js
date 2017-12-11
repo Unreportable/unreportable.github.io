@@ -13,7 +13,7 @@ window.addEventListener('load', function() {
     scope: 'openid email',
     leeway: 60
   });
-
+var numzak;
  var emailval ;
       var namevl ; 
       var phonevl;  
@@ -157,11 +157,25 @@ buttSendTELEGRAM.addEventListener('click',function(e){
               },
               dataType: "json"
           }); 
-   
+   var FBR = firebase.database().ref();
+  getElement();
+  fbr.child("storied-groove-188117").child("number").set(numzak+1);
+  
+  
    
  });
   
   
+  
+  
+ function getElement() { 
+firebase.database().ref("storied-groove-188117").on("value", function(snapshot) { 
+snapshot.forEach(function(childSnapshot) { 
+var key = childSnapshot.key; 
+var childData = childSnapshot.val(); ; 
+numzak = childData; 
+}); 
+}); 
   
   
   function logout() {
