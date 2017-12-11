@@ -192,14 +192,14 @@ input.error:focus, textarea.error:focus {
 /* Форма обратной связи */
 
 .modalbox {
-    color: #FFFFFF;
+    color: #0000000;
     display: block;
     cursor: pointer;
     padding: 10px 11px;
     font-size: 1.2em;
-    border: solid 1px #F9F9F9;
+    border: solid 1px #000000;
     border-radius: 2px;
-    background: #70C6B9;
+    background: #000000;
     width: 210px;
     text-decoration: none;
     text-align: center;
